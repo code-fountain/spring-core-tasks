@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<!-- bean id="person" class="com.codefountain.spring.core.bean.collaboration.Person">
+		<constructor-arg name="id" value="1" />
+		<constructor-arg name="firstName" value="John" />
+		<constructor-arg name="lastName" value="Doe" />
+		<constructor-arg name="address" ref="address" />
+	</bean -->
+	
+	<bean id="address" class="com.codefountain.spring.core.bean.collaboration.Address">
+		<property name="unitName" value="Unit 67" />
+		<property name="street" value="7-8 sm st" />
+		<property name="area" value="Abc" />
+		<property name="pin" value="76931" />
+	</bean>
+	
+</beans>

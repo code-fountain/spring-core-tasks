@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean id="details" abstract="true" class="com.codefountain.spring.core.property.merge.Details">
+		<property name="details">
+			<props>
+				<prop key="email1">admin@xyz.com</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="emailDetails" parent="details" class="com.codefountain.spring.core.property.merge.EmailDetails">
+		<property name="details">
+			<props merge="true">
+				<prop key="email2">user@xyz.com</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

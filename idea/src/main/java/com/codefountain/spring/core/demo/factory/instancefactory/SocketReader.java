@@ -1,0 +1,9 @@
+package com.codefountain.spring.core.demo.factory.instancefactory;
+
+public class SocketReader implements Reader {
+
+    @Override
+    public void read() {
+        System.out.println("Socket Reader reading data from socket");
+    }
+}
