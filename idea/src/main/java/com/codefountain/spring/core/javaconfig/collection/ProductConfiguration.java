@@ -6,7 +6,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ProductConfiguration {
 
-    @Bean(name = "Laptop")
+    //name is acting as the key for the map
+    
+    @Bean(name = "Laptop") 
     public Product product1(){
         return new Product("1", "Laptop");
     }
